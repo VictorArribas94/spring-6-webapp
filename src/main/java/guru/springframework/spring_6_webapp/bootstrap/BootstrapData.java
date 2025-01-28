@@ -23,7 +23,7 @@ public class BootstrapData implements CommandLineRunner {
     }
 
     @Override
-    public void run(final String... args) throws Exception {
+    public void run(final String... args) {
         final Author paco = new Author();
         paco.setFirstName("Paco");
         paco.setLastName("Peluca");
@@ -49,7 +49,7 @@ public class BootstrapData implements CommandLineRunner {
         juanitoSaved.getBooks().add(laberintoSaved);
         dddSaved.getAuthors().add(pacoSaved);
         laberintoSaved.getAuthors().add(juanitoSaved);
-        
+
         final Publisher publisher = new Publisher();
         publisher.setPublisherName("Antonio Orozco");
         final Publisher publisherSaved = publisherRepository.save(publisher);
